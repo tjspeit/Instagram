@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/stylesheets/login.css">
+    
+    <title>Login</title>
+</head>
+
+<body>
+    <div class="body"> <!-- body-main/footer -->
+        <div class="main1"> <!-- main-left/right -->
+            <div class="left">
+                <div class="leftWrap">
+                    <img class = "image" alt = "instagramImage" src = "/images/iphone.png">
+                </div>
+            </div><!-- 왼쪽부분 -->
+            <div class="right">
+                <div class="top">                                 
+                     <div id="titleWrap">
+                         <div id = "title"></div>
+                    </div>
+                    <div id = "explainWrap">
+                        <p>친구들의 사진과 동영상을 보려면 가입하세요.</p>
+                    </div>    
+                    <div class="facebookBtnWrap">
+                        <button id="facebookBtn"><strong>FaceBook으로 로그인</strong></button>
+                     </div>
+                        <div id="partitionWrap">
+                            <div class="partition"></div>
+                            <div id="partitionWord">또는</div>
+                            <div class="partition"></div>
+                        </div>
+                        <form id="inputUserInfo" action="/login" method="POST">      
+                            <input class="Info" id="num" placeholder="휴대폰 번호 또는 이메일 주소" onblur = "checkEmail()">
+                            <input class="Info" id = "nickName" placeholder="성명"  onblur = "checkNickName()">
+                            <input class="Info" id = "name" name="userId" placeholder="사용자 이름"  onblur = "checkName()">
+                            <input class="Info" id = "pw" name="userPw" placeholder="비밀번호"  onblur = "checkPw()">
+                        </form>
+                        <div class = "joinBtnWrap">
+                            <button id = "joinBtn" type="button" onclick="join()"><strong>가입</strong></button>
+                        </div>
+                        <div id="notice">
+                            가입하면 Instagram의 <strong>약관, 데이터 정책</strong>> 및 <strong>쿠키 정책</strong>>에 동의하게 됩니다.
+                        </div>
+                </div><!-- 윗부분 -->
+
+                <div class="middleWrap">
+                    <p class="middle">계정이 있으신가요? <span style="color:blue">로그인</span></p>
+                </div><!-- 중간부분 -->
+
+                <div class="bottomWrap">
+                    <div class="bottom_upper">앱을 다운로드하세요.</div>
+                    <div class = "bottom_lower">
+                        <img id = "appStore" alt = "appStore" src = "https://www.instagram.com/static/images/appstore-install-badges/badge_ios_korean-ko.png/4a5c9d62d51b.png">
+                            <img id = "googlePlay" alt = "googlePlay" src = "https://www.instagram.com/static/images/appstore-install-badges/badge_android_korean-ko.png/f155b664a93b.png">
+                            <img id = "microSoft" alt = "microSoft" src = "https://www.instagram.com/static/images/appstore-install-badges/badge_microsoft_korean-ko.png/104f45597230.png">
+                    </div>    
+                 </div><!-- 밑부분 -->
+            </div><!-- 오른쪽부분 -->
+                </div>
+        <footer class = "footer">
+                <div class = "category">INSTAGRAM   정보    지원    홍보센터    API    채용정보    개인정보처리방침    약관    디렉터리    프로필    해시태그    언어</div>
+                <div class = "INSTAGRAM">© 2019 Instagram</div>
+        </footer>
+        </div>
+
+        <script src="/javascripts/login.js"></script>
+</body>
+
+</html>
